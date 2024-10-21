@@ -54,18 +54,18 @@ export const Calendars = () => {
     [reminders, value]
   );
   return (
-    <div className="relative m-4 md:m-5 lg:m-8 p-2 md:p-5 lg:p-8 min-w-fit h-fit">
+    <div className="relative m-4 md:m-5 lg:m-8 p-2 md:p-5 lg:p-8 min-w-fit ">
       <div className="flex flex-col items-center border-2 rounded-xl md:flex-row" 
            style={{borderColor: currentColor}}>
-        <div className="p-2 lg:pr-4 m-2 lg:mr-4 flex flex-col items-center md:border-r-1" style={{borderColor: currentColor}}>
+        <div className="p-2 lg:pr-4 m-2 lg:mr-4 min-h-80 flex flex-col items-center md:border-r-1" style={{borderColor: currentColor}}>
           <Header category="Page" title="Calendar" />
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DemoContainer components={['DateCalendar', 'DateCalendar']}>
               <DemoItem>
                 <DateCalendar value={value} onChange={(newValue) => setValue(newValue)} 
                   sx={{
-                      width: `${windowWidth>900 || windowWidth<620? `300px`: '230px'}`, // Adjust the width as needed
-                      height: `${windowWidth>900 || windowWidth<620? `300px`: '230px'}`,
+                      width: `${windowWidth>900 || windowWidth<620? `300px`: '400px'}`,
+                      height: `auto`,
                       }} />
               </DemoItem>
             </DemoContainer>

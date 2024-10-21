@@ -67,7 +67,7 @@ const App = () => {
                             ${activeMenu ? 'w-56 md:w-64' : 'w-0'}
                             ${activeMenu ? 'translate-x-0 border-r border-slate-200' : '-translate-x-[400px]'} 
                             transition-all duration-500 ease-in-out
-                            mr-1 lg:bg-none h-full
+                            mr-1 lg:bg-none h-full rounded-l-xl
                             ${windowWidth < 920 ? 'absolute top-0 left-0 z-50' : ''}
                             `}
                             style={{

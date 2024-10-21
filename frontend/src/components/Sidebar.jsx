@@ -7,19 +7,20 @@ import {links} from "../data/dummy.js";
 import {useStateContext} from "../contexts/ContextProvider";
 
 
-export const Sidebar = ({menuActive, setMenuActive, currentColor, currentSndColor})=>{
+export const Sidebar = ({menuActive, setMenuActive, currentColor})=>{
     const {windowWidth} = useStateContext();
 
     const activeLink = 'flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-white text-md m-2 shadow-md';
     const normalLink = `flex items-center gap-5 pl-4 pt-3 pb-2.5 rounded-lg text-md text-gray-700 bg-white/50 backdrop-blur-md 
                         dark:text-gray-200 dark:hover:text-black hover:bg-light-gray hover:shadow-md m-2`;
     const handleCloseSideBar=()=>{
-        if(menuActive !== undefined && windowWidth <= 900){
-            console.log("setActive menu false");
-            // setActiveMenu(false);
-            setMenuActive(false);
-        }
+        // if(menuActive !== undefined && windowWidth <= 900){
+        //     console.log("setActive menu false");
+        //     // setActiveMenu(false);
+        //     setMenuActive(false);
+        // }
         // setActiveMenu(false);
+        setMenuActive(false);
         console.log("setActive menu false failed");
     }
     return (
