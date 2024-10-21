@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    padding:0;
+    font-family: "Open Sans", sans-serif;
+    position: relative ;
+}
+/* .appContainer{
+  height: auto !important;
+} */
+
+.nav-item,
+.navbar {
+  z-index: 10000;
+}
+.sidebar{
+  grid-area: side;
+}
+
+.navbar{
+  grid-area: nav;
+}
+main{
+  grid-area: content;
+  /* color: #eff0f0;
+  color: #d8e6e6; */
+}
+footer{
+  grid-area: foot;
+  max-height: 50px;
+}
+
+.showColor{
+  position: relative;
+}
+
+.colorBall.pause{
+  animation-play-state: paused;
+}
+.colorBall.start{
+  /* animation-delay: 2s; */
+  position: absolute;
+  animation: colorBallRotate 1.6s infinite forwards;
+}
+
+/* .customerForm{ */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -25%); */
+  /* transform: translateX(-50%); */
+  /* z-index: 20; */
+  /* background-color: rgba(255, 255, 255, 0.199); */
+  /* backdrop-filter: blur(7px); */
+/* } */
+.customerForm input,
+.projectform input,
+.teamform input, 
+.customerForm .statusOptions select{
+  height: 2.2rem;
+  border: 1.2px solid lightgray;
+  transition: 0.4s border-color ease;
+}
+
+.customerForm .statusOptions select{
+  font-size: 1.2rem;
+  background-color: whitesmoke;
+  transition: 0.3s background-color ease;
+}
+.customerForm .statusOptions select:hover{
+  background-color: lightblue;
+}
+.customerForm input:hover,
+.customerForm input:focus,
+.customerForm .statusOptions select:hover,
+.customerForm .statusOptions select:focus{
+  border-color: cornflowerblue;
+}
+
+@keyframes colorBallRotate{
+  0% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+	}
+	50% {
+    top: 100px;
+    height: 68px;
+    width: 66px;
+		-webkit-animation-timing-function: ease-out;
+	}
+	55% {
+    top: 120px; 
+    width: 70px;
+    height: 62px;
+    -webkit-animation-timing-function: ease-in;
+  }
+	65% {
+    top: 80px; 
+    height: 68px;
+    width: 66px;
+		-webkit-animation-timing-function: ease-out;}
+	100% {
+    top: 0;
+    -webkit-animation-timing-function: ease-in;
+	}
+}
+
+@media  screen and (max-width:800px) {
+    .sidebar{
+      z-index: 10000000;
+    }
+  }
+  
+  .e-dlg-center-center, .e-quick-popup-wrapper.e-device{
+    z-index: 1000000 !important;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(216, 216, 216);
+    border-radius: 40px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
